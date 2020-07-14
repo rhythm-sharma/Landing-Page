@@ -1,82 +1,70 @@
+/* 
+
+Avenir Fonts
+
+*/
+
+@font-face {
+  font-family: "avenir-book";
+  src: url(../fonts/AvenirLTStd-Book.otf) format("truetype");
+}
+
+@font-face {
+  font-family: avenir-light;
+  src: url(../fonts/AvenirLTStd-Light.otf) format("truetype");
+}
+
+@font-face {
+  font-family: avenir-black;
+  src: url(../fonts/AvenirLTStd-Black.otf) format("truetype");
+}
+
+@font-face {
+  font-family: avenir-medium;
+  src: url(../fonts/AvenirLTStd-Medium.otf) format("truetype");
+}
+
+@font-face {
+  font-family: avenir-roman;
+  src: url(../fonts/AvenirLTStd-Roman.otf) format("truetype");
+}
+
+@font-face {
+  font-family: avenir-heavy;
+  src: url(../fonts/Avenir-Heavy.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: avenir-medium-oblique;
+  src: url(../fonts/Avenir-MediumOblique.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: avenir-semibold;
+  src: url(../fonts/AvenirSemiBold.ttf) format("truetype");
+}
+
 html,
 body {
   margin: 0;
-  height: 100vh;
-  width: 100vw;
-  overflow: hidden;
 }
 
-h1 {
-  margin: 20px 0;
-  color: #fff;
-}
+/*
 
-.center {
-  text-align: center;
-}
+header section
 
-.nav-wrapper {
-  display: flex;
-  position: relative;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  align-items: center;
-  justify-content: space-between;
-  height: 50px;
-  padding: 0 25px;
-  z-index: 2;
-  background: #fff;
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
-}
-
-.logo-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.logo {
-  height: 28px;
-}
-
-.nav-tabs {
-  display: flex;
-  font-weight: 500;
-  font-size: 12px;
-  list-style: none;
-}
-
-.nav-tab:not(:last-child) {
-  padding: 10px 25px;
-  margin: 0;
-  color: #585656;
-}
-
-.nav-tab:last-child {
-  padding: 10px 0 0 25px;
-  color: #da4e51;
-}
-
-.nav-tab,
-.menu-btn {
-  cursor: pointer;
-}
-
-.hidden {
-  display: none;
-}
+*/
 
 @media screen and (max-width: 800px) {
   .nav-container {
-    margin-top: 10px;
-    margin: 5%;
+    margin: 1% 4% 4% 4%;
     position: fixed;
     display: none;
     overflow-y: auto;
     z-index: -1;
     top: 0;
     right: 0;
-    width: 90%;
+    width: 92%;
     height: 100%;
     background: #fff;
     box-shadow: -1px 0 2px rgba(0, 0, 0, 0.2);
@@ -161,5 +149,327 @@ h1 {
     to {
       transform: translateX(0);
     }
+  }
+}
+
+.nav-wrapper {
+  display: flex;
+  position: relative;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: space-between;
+  height: 50px;
+  padding: 0 25px;
+  z-index: 2;
+  background: #fff;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.logo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo {
+  height: 28px;
+}
+
+.nav-tabs {
+  display: flex;
+  font-weight: 500;
+  font-size: 14px;
+  list-style: none;
+  font-family: avenir-semibold, sans-serif;
+}
+
+.nav-tab:not(:last-child) {
+  padding: 10px 25px;
+  margin: 0;
+  color: #585656;
+}
+
+.nav-tab:last-child {
+  padding: 10px 0 0 25px;
+  color: #da4e51;
+}
+
+.nav-tab,
+.menu-btn {
+  cursor: pointer;
+}
+
+.hidden {
+  display: none;
+}
+
+/*
+
+  email section
+
+*/
+
+.email-section {
+  margin-top: 50px;
+}
+
+.email-heading {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  color: #1d2731;
+  font-size: 44px;
+  text-align: center;
+  max-width: 973px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 40px;
+  padding: 15px;
+  font-family: avenir-medium, sans-serif;
+  font-weight: 500;
+}
+
+.email-address-form {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+  font-family: avenir-semibold, sans-serif;
+}
+
+.input,
+.submit {
+  display: inline-block;
+  border-radius: 0;
+  -webkit-appearance: none;
+  color: white;
+}
+
+.input {
+  width: 350px;
+  border: 1px solid #ebebeb;
+  border-radius: 4px;
+  padding: 10px 15px;
+  font-size: 14px;
+  font-family: avenir-semibold, sans-serif;
+}
+
+.submit {
+  position: absolute;
+  background-color: #da4e51;
+  margin-left: 92px;
+  padding: 8px 15px;
+  height: 32px;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  font-size: 14px;
+  font-family: avenir-heavy, sans-serif;
+}
+
+.submit::-moz-focus-inner {
+  border: 0;
+}
+
+.email-help-text {
+  color: #827f7f;
+  text-align: center;
+  font-size: 12px;
+  font-family: avenir-semibold, sans-serif;
+}
+
+@media screen and (max-width: 1024px) {
+  .email-heading {
+    font-size: 35px;
+  }
+}
+
+@media screen and (max-width: 720px) {
+  .email-heading {
+    font-size: 35px;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .email-heading {
+    font-size: 28px;
+  }
+
+  .email-address-form {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .input {
+    width: 290px;
+  }
+
+  .submit {
+    position: relative;
+    width: 290px;
+    margin-top: 10px;
+    margin-left: 0px;
+  }
+}
+
+/* 
+
+Bill Gates section
+
+*/
+
+.bill-gates-container {
+  margin-top: 10%;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  justify-content: center;
+  justify-items: center;
+  display: flex;
+}
+
+.oval-image {
+  height: auto;
+  width: 83.5%;
+  margin-top: 90px;
+}
+
+.bill-image {
+  width: 42%;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  margin-left: 48%;
+}
+
+.rectangle-image {
+  height: auto;
+  width: 100%;
+  position: absolute;
+  left: 0px;
+  margin-top: 36%;
+}
+
+.blue-line-image {
+  position: absolute;
+  width: 11%;
+  margin-top: 37%;
+  margin-left: 30%;
+}
+
+@media screen and (max-width: 1200px) {
+  .oval-image {
+    width: 78.5%;
+  }
+  .bill-image {
+    width: 42.5%;
+    margin-left: 42%;
+  }
+  .rectangle-image {
+    margin-top: 36.3%;
+    width: 90%;
+    margin-left: 5%;
+  }
+  .blue-line-image {
+    width: 10%;
+    margin-top: 35.7%;
+    margin-left: 27%;
+  }
+}
+
+@media (max-width: 1199px) and (min-width: 1000px) {
+  .rectangle-image {
+    margin-top: 36.3%;
+    width: 90%;
+    margin-left: 4%;
+  }
+}
+
+@media (max-width: 999px) and (min-width: 721px) {
+  .rectangle-image {
+    margin-top: 35.7%;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .oval-image {
+    width: 76.5%;
+  }
+  .bill-image {
+    width: 42.5%;
+    margin-left: 45%;
+  }
+  .rectangle-image {
+    margin-top: 36%;
+  }
+}
+
+@media screen and (max-width: 720px) {
+  .oval-image {
+    width: 85.5%;
+  }
+  .bill-image {
+    width: 51.5%;
+    margin-left: 35%;
+  }
+  .rectangle-image {
+    margin-top: 43%;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .oval-image {
+    width: 85.5%;
+    margin-top: 74px;
+  }
+  .bill-image {
+    width: 51.5%;
+    margin-left: 38%;
+  }
+  .rectangle-image {
+    margin-top: 44%;
+  }
+}
+
+@media screen and (max-width: 520px) {
+  .oval-image {
+    width: 84.5%;
+    margin-top: 50px;
+  }
+  .bill-image {
+    width: 50.5%;
+    margin-left: 38%;
+  }
+  .rectangle-image {
+    margin-top: 44%;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .oval-image {
+    width: 84.5%;
+    margin-top: 50px;
+  }
+  .bill-image {
+    width: 50.5%;
+    margin-left: 38%;
+  }
+  .rectangle-image {
+    margin-top: 44%;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .oval-image {
+    width: 84.5%;
+    margin-top: 50px;
+  }
+  .bill-image {
+    width: 50.5%;
+    margin-left: 38%;
+  }
+  .rectangle-image {
+    margin-top: 44%;
   }
 }
