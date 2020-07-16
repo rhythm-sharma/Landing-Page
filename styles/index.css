@@ -561,6 +561,17 @@ Bill Gates section
   }
 }
 
+/* 
+
+  Join The List Section
+
+*/
+
+.testimonials-slider {
+  display: flex;
+  flex-direction: row;
+}
+
 /*
 
   Integrate section
@@ -572,6 +583,7 @@ Bill Gates section
   background-repeat: no-repeat;
   background-size: cover;
   padding-top: 100px;
+  padding-bottom: 185px;
 }
 
 .integrate-heading {
@@ -642,6 +654,7 @@ Bill Gates section
   letter-spacing: 0.6px;
   text-transform: uppercase;
   margin-bottom: 30px;
+  text-decoration: none;
 }
 
 @media screen and (max-width: 768px) {
@@ -681,5 +694,223 @@ Bill Gates section
 
   .image-sub-text {
     width: 300px;
+  }
+}
+
+/* 
+
+Footer Section
+
+*/
+
+.footer-section {
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  justify-content: center;
+  padding: 50px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.join-create-account {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  justify-items: center;
+  align-items: center;
+  align-content: center;
+  border-radius: 10px;
+  background: rgb(34, 193, 195);
+  background: linear-gradient(
+    90deg,
+    rgba(50, 140, 193, 1) 0%,
+    rgba(34, 193, 195, 1) 100%
+  );
+  box-shadow: 4px 4px 25px 0 rgba(0, 0, 0, 0.25);
+  padding-top: 30px;
+  padding-bottom: 30px;
+  margin-bottom: 30px;
+  max-width: 1440px;
+}
+
+.join-create-account-heading-container {
+  width: 70%;
+}
+
+.join-create-account-heading-text {
+  font-size: 2rem;
+  text-align: center;
+  color: white;
+}
+
+.join-create-account-btn-container {
+  width: 30%;
+}
+
+.join-create-account-btn {
+  background-color: #da4e51;
+  margin-left: 92px;
+  padding: 8px 15px;
+  height: 32px;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  font-size: 14px;
+  color: #fff;
+  width: 130px;
+}
+
+@media screen and (max-width: 900px) {
+  .join-create-account {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    align-content: center;
+  }
+
+  .join-create-account-heading-container {
+    width: 100%;
+  }
+
+  .join-create-account-btn-container {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    justify-items: center;
+  }
+
+  .join-create-account-btn {
+    margin: auto;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .footer-section {
+    padding: 10px;
+  }
+
+  .join-create-account-heading-text {
+    font-size: 1.7rem;
+  }
+}
+
+/* 
+
+Sitemap section
+
+*/
+
+.sitemap-section {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  justify-items: center;
+  align-items: center;
+  align-content: center;
+  max-width: 1440px;
+  padding: 50px 100px 50px 100px;
+}
+
+.sitemap-address {
+  width: 41.66666667%;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+.sitemap-links {
+  width: 58.33333333%;
+}
+
+.sitemap-address-text {
+  font-size: 1rem;
+  color: #4a4747;
+}
+
+.sitemap-links-list {
+  display: flex;
+  flex-direction: row;
+}
+
+.sitemap-links-listbox {
+  display: block;
+  -ms-flex: 1 0 25%;
+  flex: 1 0 25%;
+  margin: 0;
+  padding: 24px 20px 32px;
+}
+
+.sitemap-links-listbox-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.sitemap-links-listbox-list > li {
+  font-size: 14px;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.14;
+  letter-spacing: normal;
+  text-align: left;
+  color: #636363;
+  display: block;
+  padding: 8px 0;
+  margin: 0;
+}
+
+.sitemap-bottom-line {
+  margin-left: 100px;
+  margin-right: 100px;
+  color: #858484;
+}
+
+@media screen and (max-width: 800px) {
+  .sitemap-section {
+    flex-direction: column;
+    justify-content: normal;
+    justify-items: normal;
+    align-items: normal;
+    align-content: normal;
+    padding: 0 0 0 17px;
+  }
+
+  .sitemap-links-list {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .sitemap-links-list {
+    padding: 0px;
+  }
+
+  .sitemap-links-listbox {
+    padding: 0px;
+  }
+
+  .sitemap-bottom-line {
+    width: 95%;
+  }
+
+  .sitemap-bottom-line {
+    margin-left: 18px;
+  }
+}
+
+/* 
+
+ Copyright section
+
+*/
+
+.copyright {
+  padding-left: 100px;
+  margin-bottom: 50px;
+}
+
+@media screen and (max-width: 800px) {
+  .copyright {
+    padding-left: 18px;
   }
 }
