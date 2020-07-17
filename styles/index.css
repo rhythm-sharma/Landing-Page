@@ -1039,11 +1039,11 @@ Bill Gates section
   position: relative;
   z-index: 900;
   transform: scale(1);
-  -webkit-transition: all 0.5s ease-in-out;
-  -moz-transition: all 0.5s ease-in-out;
-  -ms-transition: all 0.5s ease-in-out;
-  -o-transition: all 0.5s ease-in-out;
-  transition: all 0.5s ease-in-out;
+  -webkit-transition: all 0.25s ease-in-out;
+  -moz-transition: all 0.25s ease-in-out;
+  -ms-transition: all 0.25s ease-in-out;
+  -o-transition: all 0.25s ease-in-out;
+  transition: all 0.25s ease-in-out;
 }
 
 /* Set 'z-index' to sit behind our '.active' item. */
@@ -1060,11 +1060,11 @@ Bill Gates section
 .carousel__item-next {
   transform: translate(15%) scale(0.8);
 
-  -webkit-transition: all 0.5s ease-in-out;
-  -moz-transition: all 0.5s ease-in-out;
-  -ms-transition: all 0.5s ease-in-out;
-  -o-transition: all 0.5s ease-in-out;
-  transition: all 0.5s ease-in-out;
+  -webkit-transition: all 0.25s ease-in-out;
+  -moz-transition: all 0.25s ease-in-out;
+  -ms-transition: all 0.25s ease-in-out;
+  -o-transition: all 0.25s ease-in-out;
+  transition: all 0.25s ease-in-out;
 }
 
 /* Style navigation buttons to sit in the middle, either side of the carousel. */
@@ -1097,12 +1097,6 @@ Bill Gates section
     padding-bottom: 0px;
   }
 }
-
-/* @media screen and (max-width: 851px) {
-  .carousel-wrapper {
-    margin: 40px;
-  }
-} */
 
 @media screen and (max-width: 851px) {
   .avatar {
