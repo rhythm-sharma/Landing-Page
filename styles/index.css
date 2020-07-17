@@ -396,6 +396,21 @@ Bill Gates section
   margin-left: 30%;
 }
 
+.double-quotes-image {
+  position: absolute;
+  width: 18%;
+  margin-left: -30px;
+  margin-top: -11px;
+}
+
+.text-container-desktop {
+  display: block;
+}
+
+.text-container-mobile {
+  display: none;
+}
+
 .text-container {
   position: absolute;
   margin-top: 17%;
@@ -409,7 +424,8 @@ Bill Gates section
 }
 
 .i-have-been-playing {
-  width: 350px;
+  width: 450px;
+  font-size: 1.4rem;
   margin-bottom: 20px;
   font-family: avenir-medium;
 }
@@ -444,6 +460,9 @@ Bill Gates section
     margin-top: 37.7%;
     margin-left: 27%;
   }
+  .i-have-been-playing {
+    font-size: 1.2rem;
+  }
 }
 
 @media (max-width: 1199px) and (min-width: 1000px) {
@@ -460,6 +479,11 @@ Bill Gates section
     width: 88%;
     margin-left: 4%;
   }
+
+  .i-have-been-playing {
+    width: 400px;
+    font-size: 1rem;
+  }
 }
 
 @media (max-width: 888px) and (min-width: 801px) {
@@ -468,9 +492,20 @@ Bill Gates section
     width: 97%;
     margin-left: 0%;
   }
+  .i-have-been-playing {
+    width: 333px;
+    font-size: 1rem;
+  }
 }
 
 @media screen and (max-width: 800px) {
+  .text-container-desktop {
+    display: none;
+  }
+
+  .text-container-mobile {
+    display: block;
+  }
   .oval-image {
     width: 76.5%;
     margin-top: 85px;
@@ -481,6 +516,32 @@ Bill Gates section
   }
   .rectangle-image {
     margin-top: 37%;
+  }
+
+  .text-container {
+    position: relative;
+  }
+
+  .i-have-been-playing,
+  .name-text,
+  .sub-text {
+    color: black;
+  }
+
+  .i-have-been-playing {
+    width: auto;
+    font-size: 1.4rem;
+    margin-bottom: 20px;
+    font-family: avenir-medium;
+    padding: 20px;
+  }
+
+  .text-container {
+    position: absolute;
+    margin-top: auto;
+    margin-left: auto;
+    position: relative;
+    text-align: center;
   }
 }
 
@@ -517,6 +578,9 @@ Bill Gates section
   .rectangle-image {
     margin-top: 44%;
   }
+  .blue-line-image {
+    margin-top: 44.7%;
+  }
 }
 
 @media screen and (max-width: 520px) {
@@ -531,6 +595,13 @@ Bill Gates section
   .rectangle-image {
     margin-top: 41%;
   }
+  .blue-line-image {
+    margin-top: 40.7%;
+  }
+
+  .i-have-been-playing {
+    font-size: 1rem;
+  }
 }
 
 @media screen and (max-width: 420px) {
@@ -544,6 +615,9 @@ Bill Gates section
   }
   .rectangle-image {
     margin-top: 44.5%;
+  }
+  .blue-line-image {
+    margin-top: 44.7%;
   }
 }
 
@@ -610,6 +684,7 @@ Bill Gates section
   margin: auto;
   margin-bottom: 10px;
   color: #4f4c4c;
+  padding-left: 25px;
 }
 
 .tab-menu-item {
@@ -703,7 +778,8 @@ Bill Gates section
   text-transform: uppercase;
   margin-bottom: 0 0 10px 0;
   text-decoration: none;
-  text-align: center;
+  padding-left: 25px;
+  cursor: pointer;
 }
 
 @keyframes fadeIn {
@@ -742,8 +818,9 @@ Bill Gates section
 
 @media screen and (max-width: 850px) {
   .tab-menu-heading {
-    font-size: 2rem;
+    font-size: 1.6rem;
     width: 200px;
+    padding-left: 25px;
   }
 
   .explore-all-feature {
@@ -755,6 +832,8 @@ Bill Gates section
     text-transform: uppercase;
     margin-bottom: 0 0 10px 0;
     text-decoration: none;
+    text-align: center;
+    padding-left: 15px;
   }
 }
 
@@ -762,6 +841,7 @@ Bill Gates section
   .tab-menu-heading {
     font-size: 1.6rem;
     width: 136px;
+    padding-left: 15px;
   }
   .tab-menu-item {
     padding: 10px 15px;
@@ -944,11 +1024,11 @@ Bill Gates section
   position: relative;
   z-index: 900;
   transform: scale(1);
-  -webkit-transition: all 0.75s ease-in-out;
-  -moz-transition: all 0.75s ease-in-out;
-  -ms-transition: all 0.75s ease-in-out;
-  -o-transition: all 0.75s ease-in-out;
-  transition: all 0.75s ease-in-out;
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -ms-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
 }
 
 /* Set 'z-index' to sit behind our '.active' item. */
@@ -965,11 +1045,11 @@ Bill Gates section
 .carousel__item-next {
   transform: translate(15%) scale(0.8);
 
-  -webkit-transition: all 0.75s ease-in-out;
-  -moz-transition: all 0.75s ease-in-out;
-  -ms-transition: all 0.75s ease-in-out;
-  -o-transition: all 0.75s ease-in-out;
-  transition: all 0.75s ease-in-out;
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -ms-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
 }
 
 /* Style navigation buttons to sit in the middle, either side of the carousel. */
@@ -1058,6 +1138,17 @@ Bill Gates section
   .image-card {
     padding: 10px;
     padding-top: 80px;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .image-card {
+    padding: 10px;
+    padding-top: 120px;
+  }
+
+  .carousel__item {
+    height: auto;
   }
 }
 
