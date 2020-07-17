@@ -563,13 +563,502 @@ Bill Gates section
 
 /* 
 
+  Features you will love
+
+*/
+
+.features-you-will-love-mobile {
+  display: none;
+}
+
+.features-you-will-love-container {
+  background-image: url(../assets/SVG/features-you-will-love-background.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding-top: 150px;
+  padding-bottom: 150px;
+  margin-bottom: 50px;
+}
+
+.tab-tab-image {
+  max-width: 100%;
+  display: inline-block;
+  width: 100%;
+}
+
+.tab-tab-content {
+  width: 50%;
+  padding-right: 100px;
+}
+
+.tab img {
+  border-radius: 10px;
+}
+
+.tab-menu {
+  width: 20%;
+  display: inline-block;
+  float: right;
+}
+
+.tab-menu-heading {
+  font-size: 2.6rem;
+  width: 250px;
+  margin: auto;
+  margin-bottom: 10px;
+  color: #4f4c4c;
+}
+
+.tab-menu-item {
+  padding: 10px 30px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  color: #676363;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+}
+.tab-menu-item p {
+  line-height: inherit;
+  margin: 0;
+}
+
+.tab-fase {
+  font-size: 0.8rem;
+  /*font-weight: bold;*/
+  color: #d8ecf8;
+  margin-bottom: 10px !important;
+}
+
+.tab-content {
+  z-index: 9;
+}
+.tab-content img {
+  box-shadow: 0 5px 130px 0 rgba(0, 0, 0, 0.1);
+  width: 100%;
+}
+
+.tab-tab-item:first-child {
+  top: 0;
+}
+
+.tab-tab-item {
+  display: none;
+  /*visibility: hidden;*/
+  /*opacity: 0;*/
+  top: 300px;
+  position: relative;
+  width: 100%;
+  transition: 1s;
+  transform: translateY(100px);
+  animation: fadeIn 1s ease 1 forwards;
+  -webkit-animation: fadeIn 1s ease 1 forwards;
+  -moz-animation: fadeIn 1s ease 1 forwards;
+  -o-animation: fadeIn 1s ease 1 forwards;
+  opacity: 0;
+}
+.w-p-active-tab-item {
+  display: inline-block;
+  visibility: visible;
+  top: 0;
+  transition: 1s;
+}
+.w-p-in-active-tab-item {
+  display: none;
+  top: 300px;
+  transition: 1s;
+  -webkit-transition: 1s;
+  -moz-transition: 1s;
+  -o-transition: 1s;
+}
+
+.tab-content-text {
+  position: absolute;
+  bottom: -200px;
+  right: -40px;
+  background: white;
+  padding: 40px;
+  width: 80%;
+  box-shadow: 0 5px 130px 0 rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  animation: fadeIn 1.5s ease 1 forwards;
+  transform: translateY(100px);
+  -webkit-transform: translateY(100px);
+  -moz-transform: translateY(100px);
+  -o-transform: translateY(100px);
+}
+.tab-content-text h3 {
+  margin-top: 0;
+}
+
+.explore-all-feature {
+  color: #da4e51;
+  font-size: 13px;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.31;
+  text-transform: uppercase;
+  margin-bottom: 0 0 10px 0;
+  text-decoration: none;
+  text-align: center;
+}
+
+@keyframes fadeIn {
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
+@-webkit-keyframes fadeIn {
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
+@-moz-keyframes fadeIn {
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
+@-o-keyframes fadeIn {
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.tab-menu-item-active {
+  background: #d8ecf8;
+  box-shadow: none;
+  transition: 0.3s;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -o-transition: 0.3s;
+}
+
+@media screen and (max-width: 850px) {
+  .tab-menu-heading {
+    font-size: 2rem;
+    width: 200px;
+  }
+
+  .explore-all-feature {
+    color: #da4e51;
+    font-size: 10px;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.31;
+    text-transform: uppercase;
+    margin-bottom: 0 0 10px 0;
+    text-decoration: none;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .tab-menu-heading {
+    font-size: 1.6rem;
+    width: 136px;
+  }
+  .tab-menu-item {
+    padding: 10px 15px;
+    margin-bottom: 5px;
+  }
+}
+
+@media screen and (max-width: 590px) {
+  .features-you-will-love-container {
+    display: none;
+  }
+
+  .features-you-will-love-mobile {
+    background-image: url(../assets/SVG/features-you-will-love-background.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 150px;
+    padding-bottom: 150px;
+    margin-bottom: 50px;
+  }
+
+  .tab-menu-item {
+    text-align: center;
+  }
+
+  .tab-menu-heading {
+    width: auto;
+  }
+
+  .explore-all-feature {
+    font-size: 1.3rem;
+  }
+}
+
+/* 
+
   Join The List Section
 
 */
 
 .testimonials-slider {
   display: flex;
-  flex-direction: row;
+  justify-content: center;
+}
+
+.left-arrow,
+.right-arrow {
+  width: 10%;
+  max-width: 50px;
+  cursor: pointer;
+}
+
+.image-card {
+  height: 200px;
+  width: 60%;
+  transition: 500ms;
+}
+
+.avatar {
+  vertical-align: middle;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  margin-top: -50px;
+}
+
+.image-slider {
+  width: 84%;
+  height: 58%;
+  position: relative;
+  left: 50%;
+  top: 50%;
+  width: 70%;
+  height: 60%;
+  transform: translate(-50%, -50%);
+}
+
+.image-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  justify-items: center;
+  align-items: center;
+  align-content: center;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  border-radius: 6px;
+  background-color: #ffffff;
+  box-shadow: 0px 10px 40px rgba(0, 0, 0, 0.2);
+  padding: 50px 55px;
+  width: 50%;
+  transition: 500ms;
+}
+
+.image-card-name,
+.image-card-company {
+  font-size: 1.6rem;
+  margin: 0 0 10px 0;
+}
+
+.image-card-text {
+  font-size: 1.6rem;
+  color: #4a4a4a;
+  text-align: center;
+}
+
+.image-card-company {
+  color: #5ecadf;
+}
+
+/* slider animation classes */
+
+.position-absolute {
+  position: absolute !important;
+  transition: 500ms;
+}
+
+.height {
+  height: 155px !important;
+  transition: 500ms;
+}
+
+.z-index {
+  z-index: 99;
+  transition: 500ms;
+}
+
+.active {
+  z-index: 2;
+}
+
+.proactive {
+  z-index: 1;
+}
+
+/* Parent wrapper to carousel. Width can be changed as needed. */
+.carousel-wrapper {
+  overflow: hidden;
+  width: 90%;
+  margin: auto;
+  padding: 4rem;
+  margin-top: 50px;
+}
+
+/* Apply 'border-box' to 'box-sizing' so border and padding is included in the width and height. */
+.carousel-wrapper * {
+  box-sizing: border-box;
+}
+
+/* We'll be using the 'transform' property to move the carousel's items, so setting the 'transform-style' to 'preserve-3d' will make sure our nested elements are rendered properly in the 3D space. */
+.horizontal-carousel {
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  height: 500px;
+}
+
+/* By default we're hiding items (except the initial one) until the JS initiates. Elements are absolutely positioned with a width of 100% (as we're styling for mobile first), letting the content's height dictate the height of the carousel. Our magic property here for all our animation needs is 'transition', taking the properties we wish to animate 'transform' and 'opacity', along with the length of time in seconds. */
+.carousel__item {
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  width: 70%;
+  margin: auto 15%;
+  z-index: 100;
+  transition: opacity 0.2s;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Display the initial item and bring it to the front using 'z-index'. These styles also apply to the 'active' item. */
+.carousel__item--active {
+  opacity: 1;
+  position: relative;
+  z-index: 900;
+  transform: scale(1);
+  -webkit-transition: all 0.75s ease-in-out;
+  -moz-transition: all 0.75s ease-in-out;
+  -ms-transition: all 0.75s ease-in-out;
+  -o-transition: all 0.75s ease-in-out;
+  transition: all 0.75s ease-in-out;
+}
+
+/* Set 'z-index' to sit behind our '.active' item. */
+.carousel__item-next {
+  z-index: 800;
+  opacity: 0.7;
+}
+
+.carousel__item-next {
+  right: 0;
+}
+
+/* Translate next item to the right */
+.carousel__item-next {
+  transform: translate(15%) scale(0.8);
+
+  -webkit-transition: all 0.75s ease-in-out;
+  -moz-transition: all 0.75s ease-in-out;
+  -ms-transition: all 0.75s ease-in-out;
+  -o-transition: all 0.75s ease-in-out;
+  transition: all 0.75s ease-in-out;
+}
+
+/* Style navigation buttons to sit in the middle, either side of the carousel. */
+.carousel__button-prev,
+.carousel__button-next {
+  position: absolute;
+  top: 50%;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 1001; /* Sit on top of everything */
+  /* opacity: 0; Hide buttons until carousel is initialised  
+  transition: opacity 1s; */
+}
+
+.carousel__button-prev {
+  left: 0;
+}
+
+.carousel__button-next {
+  right: 0;
+}
+
+@media screen and (max-width: 1120px) {
+  .carousel-wrapper {
+    width: 80%;
+  }
+  .image-card {
+    padding-bottom: 0px;
+  }
+}
+
+/* @media screen and (max-width: 851px) {
+  .carousel-wrapper {
+    margin: 40px;
+  }
+} */
+
+@media screen and (max-width: 851px) {
+  .avatar {
+    width: 100px;
+    height: 100px;
+    margin-top: -40px;
+  }
+
+  .carousel__item {
+    height: 81%;
+  }
+
+  .horizontal-carousel {
+    height: auto;
+  }
+
+  .carousel-wrapper {
+    width: auto;
+    margin: auto;
+  }
+
+  .image-card-text {
+    font-size: 1.2rem;
+  }
+  .horizontal-carousel {
+    height: 400px;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .horizontal-carousel {
+    height: 450px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .horizontal-carousel {
+    height: 450px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .carousel-wrapper {
+    height: 450px;
+    padding: 4rem 0 4rem 0;
+  }
+
+  .image-card {
+    padding: 10px;
+    padding-top: 80px;
+  }
 }
 
 /*
