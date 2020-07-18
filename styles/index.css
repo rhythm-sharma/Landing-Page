@@ -1061,13 +1061,14 @@ Bill Gates section
 .integrate-image-section {
   display: flex;
   flex-wrap: wrap;
-  padding-top: 9%;
+  padding-top: 15%;
   padding-bottom: 17%;
 }
 
 .image-section {
   width: 50%;
   text-align: center;
+  padding: 0px 30px;
   box-sizing: border-box;
 }
 
@@ -1338,6 +1339,6 @@ Sitemap section
 
 @media screen and (max-width: 800px) {
   .copyright {
-    padding-left: 18px;
+    margin-left: 18px;
   }
 }
