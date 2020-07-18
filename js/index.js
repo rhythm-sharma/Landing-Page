@@ -13,9 +13,6 @@
       });
 
       if (activeIndex === 0) {
-        // carouselItems[carouselItems.length - 1].classList.add(
-        //   "carousel__item-prev"
-        // );
         carouselItems[activeIndex + 1].classList.add("carousel__item-next");
       } else if (activeIndex === 1) {
         carouselItems[0].classList.add("carousel__item-next");
@@ -103,31 +100,12 @@
   linearCarousel(document.querySelector(".horizontal-carousel"));
 })();
 
-// jQuery(".tab-menu-item").click(function () {
-//   var _this = jQuery(this);
-//   var _menu_index = _this.index();
+// Tab animation
 
-//   jQuery(this)
-//     .addClass("w-p-active-tab-item")
-//     .siblings()
-//     .removeClass("w-p-active-tab-item");
+// Runs the tab animation every five seconds
+// If user click on any tab at any time then animation will start from that tab on every five second
 
-//   jQuery(".tab-tab-item")
-//     .eq(_menu_index)
-//     .addClass("w-p-active-tab-item")
-//     .siblings()
-//     .removeClass("w-p-active-tab-item");
-
-//   jQuery(".tab-tab-item").eq(_menu_index).addClass("w-p-active-tab-item");
-
-//   jQuery(".tab-tab-item")
-//     .not(":eq(" + _menu_index + ")")
-//     .removeClass("w-p-active-tab-item");
-
-//   // Menu item
-//   jQuery(".tab-menu-item").removeClass("tab-menu-item-active");
-//   _this.addClass("tab-menu-item-active");
-// });
+let animationInterval;
 
 const tabMenuItemEdits = document.querySelectorAll(".tab-menu-item");
 
@@ -139,8 +117,11 @@ function changeTab(evt) {
     if (tabMenuItemEdits[i] == evt.target) {
       tabMenuItemEdits[i].classList.add("w-p-active-tab-item");
       for (let sibling of tabMenuItemEdits[i].parentNode.children) {
-        if (sibling !== tabMenuItemEdits[i])
+        if (sibling !== tabMenuItemEdits[i]) {
           sibling.classList.remove("w-p-active-tab-item");
+          clearInterval(animationInterval);
+          initializeChangeTab(i);
+        }
       }
 
       const tabTabItem = document.querySelectorAll(".tab-tab-item")[i];
@@ -160,3 +141,48 @@ function changeTab(evt) {
       tabMenuItem.classList.add("tab-menu-item-active");
     }
 }
+
+function initializeChangeTab(idx) {
+  let index;
+
+  if (idx) {
+    index = idx;
+  } else {
+    index = 0;
+  }
+
+  animationInterval = window.setInterval(() => {
+    if (index >= 4) {
+      index = 0;
+    } else {
+      index++;
+    }
+    tabChangeAnimation(index);
+  }, 5000);
+}
+
+function tabChangeAnimation(i) {
+  tabMenuItemEdits[i].classList.add("w-p-active-tab-item");
+  for (let sibling of tabMenuItemEdits[i].parentNode.children) {
+    if (sibling !== tabMenuItemEdits[i])
+      sibling.classList.remove("w-p-active-tab-item");
+  }
+
+  const tabTabItem = document.querySelectorAll(".tab-tab-item")[i];
+
+  tabTabItem.classList.add("w-p-active-tab-item");
+  for (let sibling of tabTabItem.parentNode.children) {
+    if (sibling !== tabMenuItemEdits[i])
+      sibling.classList.remove("w-p-active-tab-item");
+  }
+  tabTabItem.classList.add("w-p-active-tab-item");
+
+  const tabMenuItem = document.querySelectorAll(".tab-menu-item")[i];
+  for (let sibling of tabMenuItem.parentNode.children) {
+    if (sibling !== tabMenuItemEdits[i])
+      sibling.classList.remove("tab-menu-item-active");
+  }
+  tabMenuItem.classList.add("tab-menu-item-active");
+}
+
+// initializeChangeTab();

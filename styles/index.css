@@ -93,18 +93,18 @@ header section
 
 .nav-wrapper {
   display: flex;
-  position: relative;
+  position: fixed;
   flex-direction: row;
   flex-wrap: nowrap;
   align-items: center;
   justify-content: space-between;
-  height: 50px;
+  height: 80px;
   padding: 0 25px;
   z-index: 2;
   background: #fff;
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
-  position: fixed;
-  width: 96.5%;
+  width: 100%;
+  box-sizing: border-box;
   top: 0px;
 }
 
@@ -114,26 +114,21 @@ header section
   align-items: center;
 }
 
-.logo {
-  height: 28px;
-}
-
 .nav-tabs {
   display: flex;
   font-weight: 500;
-  font-size: 14px;
+  font-size: 1rem;
   list-style: none;
   font-family: avenir-semibold, sans-serif;
 }
 
-.nav-tab:not(:last-child) {
-  padding: 10px 25px;
+.nav-tab {
+  padding: 10px 0px 10px 50px;
   margin: 0;
   color: #585656;
 }
 
-.nav-tab:last-child {
-  padding: 10px 0 0 25px;
+.nav-tab.create-account-btn {
   color: #da4e51;
 }
 
@@ -147,12 +142,6 @@ header section
 }
 
 @media screen and (max-width: 800px) {
-  .nav-wrapper {
-    position: fixed !important;
-    width: 90%;
-    top: 0px;
-  }
-
   .nav-container {
     margin: 1% 4% 4% 4%;
     position: fixed;
@@ -175,7 +164,7 @@ header section
     padding-left: 0px;
   }
 
-  .nav-tab:not(:last-child) {
+  .nav-tab {
     padding: 20px 25px;
     margin: 0;
     border-right: unset;
@@ -183,7 +172,7 @@ header section
     color: #585656;
   }
 
-  .nav-tab:last-child {
+  .nav-tab.create-account-btn {
     padding: 15px 25px;
     color: #da4e51;
   }
@@ -249,10 +238,10 @@ header section
   }
 }
 
-@media screen and (max-width: 500px) {
-  .nav-wrapper {
-    padding: 0 10px;
-  }
+/*  Body Container */
+
+.body-container {
+  margin-top: 50px;
 }
 
 /*
@@ -262,7 +251,7 @@ header section
 */
 
 .email-section {
-  margin-top: 50px;
+  padding-top: 100px;
 }
 
 .email-heading {
@@ -282,12 +271,13 @@ header section
 }
 
 .email-address-form {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  height: 40px;
+  width: 400px;
+  margin: auto;
+  border: 1px solid #ebebeb;
+  box-sizing: border-box;
   font-family: avenir-semibold, sans-serif;
+  height: 50px;
+  padding: 10px;
 }
 
 .input,
@@ -299,24 +289,24 @@ header section
 }
 
 .input {
-  width: 350px;
-  border: 1px solid #ebebeb;
+  width: 179px;
   color: black;
-  border-radius: 4px;
-  padding: 10px 15px;
+  border: none;
+  text-decoration: none;
+  -webkit-appearance: none;
+  outline: none;
   font-size: 14px;
   font-family: avenir-semibold, sans-serif;
 }
 
 .submit {
-  position: absolute;
   background-color: #da4e51;
-  margin-left: 92px;
-  padding: 8px 15px;
-  height: 32px;
+  height: 30px;
   border: 1px solid transparent;
   border-radius: 4px;
-  font-size: 14px;
+  font-size: 1rem;
+  height: 30px;
+  float: right;
   font-family: avenir-heavy, sans-serif;
 }
 
@@ -349,19 +339,42 @@ header section
   }
 
   .email-address-form {
+    display: flex;
+    align-items: center;
     flex-direction: column;
+    margin: auto;
+    box-sizing: border-box;
+    font-family: avenir-semibold, sans-serif;
+    width: auto;
     height: auto;
+    padding: 10px;
+    border: none;
   }
 
   .input {
-    width: 290px;
+    width: 100%;
+    text-align: center;
+    border: 1px solid #ebebeb;
+    color: black;
+    border-radius: 4px;
+    padding: 5px;
+    font-size: 14px;
+    font-family: avenir-semibold, sans-serif;
   }
 
   .submit {
     position: relative;
-    width: 290px;
+    width: 100%;
     margin-top: 10px;
     margin-left: 0px;
+    background-color: #da4e51;
+    height: 30px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    font-size: 1rem;
+    height: 30px;
+    float: right;
+    font-family: avenir-heavy, sans-serif;
   }
 }
 
@@ -662,92 +675,58 @@ Bill Gates section
 
 */
 
-.features-you-will-love-mobile {
+.features-container-mobile {
   display: none;
 }
 
-.features-you-will-love-container {
+.features-container-desktop {
   background-image: url(../assets/SVG/features-you-will-love-background.svg);
   background-repeat: no-repeat;
-  background-size: cover;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  padding-top: 150px;
-  padding-bottom: 150px;
-  margin-bottom: 50px;
+  background-size: contain;
 }
 
-.tab-tab-image {
-  max-width: 100%;
-  display: inline-block;
-  width: 100%;
+.tab-container {
+  display: flex;
+  flex-wrap: wrap;
+  padding-top: 15%;
+  padding-bottom: 17%;
 }
 
 .tab-tab-content {
-  width: 50%;
-  padding-right: 100px;
-}
-
-.tab img {
-  border-radius: 10px;
+  width: 70%;
+  padding: 0 10% 0 10%;
+  box-sizing: border-box;
 }
 
 .tab-menu {
-  width: 20%;
-  display: inline-block;
-  float: right;
+  padding: 6% 10% 0 0%;
+  width: 30%;
+  box-sizing: border-box;
 }
 
 .tab-menu-heading {
   font-size: 2.6rem;
   width: 250px;
-  margin: auto;
-  margin-bottom: 10px;
+  margin: 0;
   color: #4f4c4c;
-  padding-left: 25px;
+}
+
+.tab-menu-items {
+  width: fit-content;
 }
 
 .tab-menu-item {
-  padding: 10px 30px;
-  border-radius: 10px;
-  margin-bottom: 20px;
+  width: 150px;
+  padding: 10px 20px;
+  border-radius: 4px;
+  margin-bottom: 12px;
   color: #676363;
   cursor: pointer;
-  display: flex;
-  flex-direction: column;
-}
-.tab-menu-item p {
-  line-height: inherit;
-  margin: 0;
-}
-
-.tab-fase {
-  font-size: 0.8rem;
-  /*font-weight: bold;*/
-  color: #d8ecf8;
-  margin-bottom: 10px !important;
-}
-
-.tab-content {
-  z-index: 9;
-}
-.tab-content img {
-  box-shadow: 0 5px 130px 0 rgba(0, 0, 0, 0.1);
-  width: 100%;
-}
-
-.tab-tab-item:first-child {
-  top: 0;
+  font-size: 1rem;
 }
 
 .tab-tab-item {
   display: none;
-  /*visibility: hidden;*/
-  /*opacity: 0;*/
-  top: 300px;
-  position: relative;
-  width: 100%;
   transition: 1s;
   transform: translateY(100px);
   animation: fadeIn 1s ease 1 forwards;
@@ -756,6 +735,12 @@ Bill Gates section
   -o-animation: fadeIn 1s ease 1 forwards;
   opacity: 0;
 }
+
+.tab-tab-image {
+  width: 100%;
+  height: 80%;
+}
+
 .w-p-active-tab-item {
   display: inline-block;
   visibility: visible;
@@ -771,35 +756,11 @@ Bill Gates section
   -o-transition: 1s;
 }
 
-.tab-content-text {
-  position: absolute;
-  bottom: -200px;
-  right: -40px;
-  background: white;
-  padding: 40px;
-  width: 80%;
-  box-shadow: 0 5px 130px 0 rgba(0, 0, 0, 0.1);
-  border-radius: 10px;
-  animation: fadeIn 1.5s ease 1 forwards;
-  transform: translateY(100px);
-  -webkit-transform: translateY(100px);
-  -moz-transform: translateY(100px);
-  -o-transform: translateY(100px);
-}
-.tab-content-text h3 {
-  margin-top: 0;
-}
-
 .explore-all-feature {
   color: #da4e51;
-  font-size: 13px;
-  font-style: normal;
-  font-stretch: normal;
+  font-size: 1rem;
   line-height: 1.31;
   text-transform: uppercase;
-  margin-bottom: 0 0 10px 0;
-  text-decoration: none;
-  padding-left: 30px;
   cursor: pointer;
 }
 
@@ -837,67 +798,79 @@ Bill Gates section
   -o-transition: 0.3s;
 }
 
-@media screen and (max-width: 850px) {
+@media screen and (max-width: 900px) {
   .tab-menu-heading {
     font-size: 1.6rem;
     width: 200px;
-    padding-left: 25px;
   }
 
-  .explore-all-feature {
-    color: #da4e51;
-    font-size: 10px;
-    font-style: normal;
-    font-stretch: normal;
-    line-height: 1.31;
-    text-transform: uppercase;
-    margin-bottom: 0 0 10px 0;
-    text-decoration: none;
-    text-align: center;
-    padding-left: 25px;
+  .tab-menu-item {
+    margin-bottom: 0px;
   }
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 750px) {
   .tab-menu-heading {
     font-size: 1.6rem;
     width: 136px;
-    padding-left: 15px;
-  }
-  .tab-menu-item {
-    padding: 10px 15px;
-    margin-bottom: 5px;
-  }
-}
-
-@media screen and (max-width: 590px) {
-  .features-you-will-love-container {
-    display: none;
-  }
-
-  .features-you-will-love-mobile {
-    background-image: url(../assets/SVG/features-you-will-love-background.svg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding-top: 150px;
-    padding-bottom: 150px;
-    margin-bottom: 50px;
-  }
-
-  .tab-menu-item {
-    text-align: center;
-  }
-
-  .tab-menu-heading {
-    width: auto;
   }
 
   .explore-all-feature {
-    font-size: 1.3rem;
-    padding-left: 15px;
+    font-size: 0.8rem;
+  }
+
+  .tab-menu-item {
+    width: 120px;
+    font-size: 0.8rem;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .features-container-desktop {
+    display: none;
+  }
+
+  .features-container-mobile {
+    display: block;
+    background-image: url(../assets/SVG/features-you-will-love-background.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin-top: 60px;
+    padding-top: 60px;
+  }
+
+  .tab-menu-heading {
+    text-align: center;
+    width: auto;
+  }
+
+  .tab-items {
+    margin-top: 40px;
+  }
+
+  .tab-menu-item {
+    margin: 0px;
+    width: auto;
+    font-size: 1.6rem;
+    text-align: center;
+  }
+
+  .tab-tab-image {
+    width: 100%;
+    height: 300px;
+    padding: 1% 10% 1% 10%;
+    box-sizing: border-box;
+  }
+
+  .explore-all-feature {
+    font-size: 1.2rem;
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .tab-tab-image {
+    height: 250px;
   }
 }
 
@@ -907,6 +880,10 @@ Bill Gates section
 
 */
 
+.join-the-list-section {
+  margin-top: 90px;
+}
+
 .testimonials-slider {
   display: flex;
   justify-content: center;
@@ -914,45 +891,27 @@ Bill Gates section
 
 .left-arrow,
 .right-arrow {
-  width: 10%;
-  max-width: 50px;
+  width: 50px;
   cursor: pointer;
 }
 
-.image-card {
-  height: 200px;
-  width: 60%;
-  transition: 500ms;
-}
-
 .avatar {
-  vertical-align: middle;
-  width: 150px;
-  height: 150px;
+  width: 100px;
+  height: 100px;
   border-radius: 50%;
-  position: absolute;
-  top: 0;
-  margin-top: -50px;
+  margin-top: -100px;
 }
 
-.image-slider {
+.image-card-container {
+  max-width: 675px;
   width: 84%;
-  height: 58%;
+  margin-left: auto;
+  margin-right: auto;
   position: relative;
-  left: 50%;
-  top: 50%;
-  width: 70%;
-  height: 60%;
-  transform: translate(-50%, -50%);
 }
 
 .image-card {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  justify-items: center;
-  align-items: center;
-  align-content: center;
+  text-align: center;
   margin-left: auto;
   margin-right: auto;
   position: relative;
@@ -960,7 +919,6 @@ Bill Gates section
   background-color: #ffffff;
   box-shadow: 0px 10px 40px rgba(0, 0, 0, 0.2);
   padding: 50px 55px;
-  width: 50%;
   transition: 500ms;
 }
 
@@ -971,7 +929,7 @@ Bill Gates section
 }
 
 .image-card-text {
-  font-size: 1.6rem;
+  font-size: 1.2rem;
   color: #4a4a4a;
   text-align: center;
 }
@@ -982,69 +940,32 @@ Bill Gates section
 
 /* slider animation classes */
 
-.position-absolute {
-  position: absolute !important;
-  transition: 500ms;
-}
-
-.height {
-  height: 155px !important;
-  transition: 500ms;
-}
-
-.z-index {
-  z-index: 99;
-  transition: 500ms;
-}
-
-.active {
-  z-index: 2;
-}
-
-.proactive {
-  z-index: 1;
-}
-
-/* Parent wrapper to carousel. Width can be changed as needed. */
 .carousel-wrapper {
-  overflow: hidden;
-  width: 90%;
-  margin: auto;
   padding: 4rem;
   margin-top: 50px;
 }
 
-/* Apply 'border-box' to 'box-sizing' so border and padding is included in the width and height. */
 .carousel-wrapper * {
   box-sizing: border-box;
 }
 
-/* We'll be using the 'transform' property to move the carousel's items, so setting the 'transform-style' to 'preserve-3d' will make sure our nested elements are rendered properly in the 3D space. */
 .horizontal-carousel {
   -webkit-transform-style: preserve-3d;
   -moz-transform-style: preserve-3d;
   transform-style: preserve-3d;
-  height: 500px;
 }
 
-/* By default we're hiding items (except the initial one) until the JS initiates. Elements are absolutely positioned with a width of 100% (as we're styling for mobile first), letting the content's height dictate the height of the carousel. Our magic property here for all our animation needs is 'transition', taking the properties we wish to animate 'transform' and 'opacity', along with the length of time in seconds. */
 .carousel__item {
   opacity: 0;
   position: absolute;
   top: 0;
-  width: 70%;
-  margin: auto 15%;
-  z-index: 100;
   transition: opacity 0.2s;
-  height: 100%;
-  object-fit: cover;
 }
 
-/* Display the initial item and bring it to the front using 'z-index'. These styles also apply to the 'active' item. */
 .carousel__item--active {
   opacity: 1;
   position: relative;
-  z-index: 900;
+  z-index: 2;
   transform: scale(1);
   -webkit-transition: all 0.25s ease-in-out;
   -moz-transition: all 0.25s ease-in-out;
@@ -1053,20 +974,18 @@ Bill Gates section
   transition: all 0.25s ease-in-out;
 }
 
-/* Set 'z-index' to sit behind our '.active' item. */
 .carousel__item-next {
-  z-index: 800;
+  z-index: 1;
   opacity: 0.7;
 }
 
 .carousel__item-next {
-  right: 0;
+  right: -10%;
 }
 
 /* Translate next item to the right */
 .carousel__item-next {
-  transform: translate(15%) scale(0.8);
-
+  transform: translate(15%) scale(0.68);
   -webkit-transition: all 0.25s ease-in-out;
   -moz-transition: all 0.25s ease-in-out;
   -ms-transition: all 0.25s ease-in-out;
@@ -1074,7 +993,6 @@ Bill Gates section
   transition: all 0.25s ease-in-out;
 }
 
-/* Style navigation buttons to sit in the middle, either side of the carousel. */
 .carousel__button-prev,
 .carousel__button-next {
   position: absolute;
@@ -1083,9 +1001,7 @@ Bill Gates section
   height: 3rem;
   border-radius: 50%;
   cursor: pointer;
-  z-index: 1001; /* Sit on top of everything */
-  /* opacity: 0; Hide buttons until carousel is initialised  
-  transition: opacity 1s; */
+  z-index: 4;
 }
 
 .carousel__button-prev {
@@ -1096,75 +1012,19 @@ Bill Gates section
   right: 0;
 }
 
-@media screen and (max-width: 1120px) {
+@media screen and (max-width: 768px) {
   .carousel-wrapper {
-    width: 80%;
-  }
-  .image-card {
-    padding-bottom: 0px;
-  }
-}
-
-@media screen and (max-width: 851px) {
-  .avatar {
-    width: 100px;
-    height: 100px;
-    margin-top: -40px;
-  }
-
-  .carousel__item {
-    height: 81%;
-  }
-
-  .horizontal-carousel {
-    height: auto;
-  }
-
-  .carousel-wrapper {
-    width: auto;
-    margin: auto;
-  }
-
-  .image-card-text {
-    font-size: 1.2rem;
-  }
-  .horizontal-carousel {
-    height: 400px;
-  }
-}
-
-@media screen and (max-width: 650px) {
-  .horizontal-carousel {
-    height: 450px;
-  }
-}
-
-@media screen and (max-width: 600px) {
-  .horizontal-carousel {
-    height: 450px;
-  }
-}
-
-@media screen and (max-width: 600px) {
-  .carousel-wrapper {
-    height: 450px;
-    padding: 4rem 0 4rem 0;
-  }
-
-  .image-card {
+    margin-top: 100px;
     padding: 10px;
-    padding-top: 80px;
   }
-}
 
-@media screen and (max-width: 420px) {
   .image-card {
-    padding: 10px;
-    padding-top: 120px;
+    padding: 35px;
   }
 
-  .carousel__item {
-    height: auto;
+  .image-card-name,
+  .image-card-company {
+    font-size: 1.4rem;
   }
 }
 
@@ -1177,9 +1037,9 @@ Bill Gates section
 .integrate-section {
   background-image: url(../assets/SVG/integrate-background.svg);
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: contain;
+  margin-top: 100px;
   padding-top: 100px;
-  padding-bottom: 185px;
 }
 
 .integrate-heading {
@@ -1196,31 +1056,24 @@ Bill Gates section
   margin: 0 auto;
   border: none;
   border-top: 3px solid #5ecadf;
-  margin-bottom: 50px;
 }
 
 .integrate-image-section {
   display: flex;
-  flex-direction: row;
-  justify-content: center;
-  justify-items: center;
-  align-content: center;
-  align-items: center;
+  flex-wrap: wrap;
+  padding-top: 9%;
+  padding-bottom: 17%;
 }
 
 .image-section {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  justify-items: center;
-  align-content: center;
-  align-items: center;
   width: 50%;
+  text-align: center;
+  box-sizing: border-box;
 }
 
 .integrate-image {
+  max-width: 280px;
   width: 100%;
-  height: 300px;
 }
 
 .image-heading,
@@ -1229,12 +1082,10 @@ Bill Gates section
 }
 
 .image-heading {
-  width: 400px;
   font-size: 1.6rem;
 }
 
 .image-sub-text {
-  width: 400px;
   font-size: 1.4rem;
   font-weight: 100;
   color: #4a4a4a;
@@ -1251,6 +1102,21 @@ Bill Gates section
   text-transform: uppercase;
   margin-bottom: 30px;
   text-decoration: none;
+}
+
+.row {
+  margin-right: -15px;
+  margin-left: -15px;
+}
+
+.row:before,
+.row:after {
+  display: table;
+  content: " ";
+}
+
+.row:after {
+  clear: both;
 }
 
 @media screen and (max-width: 768px) {
@@ -1300,23 +1166,6 @@ Footer Section
 */
 
 .footer-section {
-  display: flex;
-  flex-direction: column;
-  justify-items: center;
-  justify-content: center;
-  padding: 50px;
-  max-width: 1200px;
-  margin: auto;
-}
-
-.join-create-account {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  justify-items: center;
-  align-items: center;
-  align-content: center;
-  border-radius: 10px;
   background: rgb(34, 193, 195);
   background: linear-gradient(
     90deg,
@@ -1324,31 +1173,34 @@ Footer Section
     rgba(34, 193, 195, 1) 100%
   );
   box-shadow: 4px 4px 25px 0 rgba(0, 0, 0, 0.25);
-  padding-top: 30px;
-  padding-bottom: 30px;
-  margin-bottom: 30px;
-  max-width: 1440px;
+  border-radius: 10px;
+  margin: auto;
+  width: 85%;
+  margin-bottom: 75px;
 }
 
-.join-create-account-heading-container {
-  width: 70%;
+.join-create-account {
+  text-align: center;
 }
 
-.join-create-account-heading-text {
+.join-create-account-content {
+  padding: 50px 150px 50px 150px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.join-create-account-heading {
+  display: inline-block;
   font-size: 2rem;
   text-align: center;
   color: white;
 }
 
-.join-create-account-btn-container {
-  width: 30%;
-}
-
 .join-create-account-btn {
   background-color: #da4e51;
-  margin-left: 92px;
-  padding: 0px 15px;
-  height: 32px;
+  height: 43px;
   border: 1px solid transparent;
   border-radius: 4px;
   font-size: 14px;
@@ -1356,39 +1208,18 @@ Footer Section
   width: 180px;
 }
 
-@media screen and (max-width: 1072px) {
-  .join-create-account {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    justify-items: center;
-    align-items: center;
-    align-content: center;
-  }
-
-  .join-create-account-heading-container {
-    width: 100%;
-  }
-
-  .join-create-account-btn-container {
-    display: flex;
-    width: 100%;
-    justify-content: center;
-    justify-items: center;
-  }
-
-  .join-create-account-btn {
-    margin: auto;
+@media screen and (max-width: 1220px) {
+  .join-create-account-content {
+    padding: 25px 50px 25px 50px;
   }
 }
 
-@media screen and (max-width: 600px) {
-  .footer-section {
-    padding: 10px;
+@media screen and (max-width: 1000px) {
+  .join-create-account-content {
+    flex-direction: column;
   }
-
-  .join-create-account-heading-text {
-    font-size: 1.7rem;
+  .join-create-account-content {
+    padding: 25px 50px 25px 50px;
   }
 }
 
@@ -1501,7 +1332,7 @@ Sitemap section
 */
 
 .copyright {
-  padding-left: 100px;
+  margin-left: 100px;
   margin-bottom: 50px;
 }
 
