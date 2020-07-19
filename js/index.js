@@ -18,12 +18,20 @@
         carouselItems[0].classList.add("carousel__item-next");
       }
       carouselItems[activeIndex].classList.add("carousel__item--active");
-    };
 
-    const cloneElementAndAppendToCarousel = (element) => {
-      var clone = element.cloneNode(true);
-      console.log(clone);
-      carouselElement.appendChild(clone);
+      // JS code for dots animation
+
+      const carouselActiveDot = document.getElementById("carouselActiveDot");
+
+      carouselActiveDot.classList.remove(
+        "active-dot--prev",
+        "active-dot--next"
+      );
+      if (activeIndex === 0) {
+        carouselActiveDot.classList.add("active-dot--prev");
+      } else {
+        carouselActiveDot.classList.add("active-dot--next");
+      }
     };
 
     const moveToNextItem = () => {
@@ -46,14 +54,18 @@
 
     const addButtonsToCarousel = () => {
       const prevButtonElement = document.getElementById("leftArrow");
+      const nextButtonElement = document.getElementById("rightArrow");
+
+      const carouselLeftDot = document.getElementById("carouselLeftDot");
+      const carouselRightDot = document.getElementById("carouselRightDot");
 
       prevButtonElement.classList.add("carousel__button-prev");
-
-      const nextButtonElement = document.getElementById("rightArrow");
       nextButtonElement.classList.add("carousel__button-next");
 
       prevButtonElement.addEventListener("click", moveToPrevItem);
       nextButtonElement.addEventListener("click", moveToNextItem);
+      carouselLeftDot.addEventListener("click", moveToNextItem);
+      carouselRightDot.addEventListener("click", moveToPrevItem);
     };
 
     const bindClickEventForItems = () => {
