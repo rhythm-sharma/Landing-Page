@@ -197,4 +197,4 @@ function tabChangeAnimation(i) {
   tabMenuItem.classList.add("tab-menu-item-active");
 }
 
-// initializeChangeTab();
+initializeChangeTab();
